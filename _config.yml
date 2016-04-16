@@ -1,15 +1,10 @@
-# External Gems
-gems: 						[jekyll-paginate]
-
-
 # Site Settings
 title: 						"EckoThemes"
 email: 						"support@ecko.me"
 description: 				"Astro is a content focused responsive theme for the Jekyll blogging platform. Available for purchase at ThemeForest.net."
-baseurl: 					"http://localhost"
+baseurl: 					""
 logourl: 					"/assets/img/bloglogo.jpg"
 fa-logo: 					"fa-bookmark-o"
-paginate: 					5
 
 
 # Author Settings

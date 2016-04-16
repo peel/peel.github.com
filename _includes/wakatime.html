@@ -1,0 +1,75 @@
+<style>
+ .languagesBox {
+     color: #3b3b3b !important;
+ }
+ languages{
+     display:block;
+     background-color: "#38B6AB";
+     width:100%;
+     margin:0.2em 0 0 0;
+ }
+ language{
+     float:left;
+     display:block;
+     margin:0;
+     padding:0;
+     height:3px;
+ }
+ text{
+     float:left;
+     display:block;
+     padding:0;
+     height:100%;
+     text-align: center;
+     font-size: 12px;
+     font-weight: 500;
+     line-height: 33px;
+     height: 33px;
+     overflow-y: hidden;
+ }
+</style>
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+ var default_data = {"jsonapi":{"version":"1.0"},"data":[{"type":"language","id":"523c19ca-ba54-449f-be55-7813bc0ba763","attributes":{"percent":32.32,"name":"Scala","id":"523c19ca-ba54-449f-be55-7813bc0ba763"}},{"type":"language","id":"9f3f07a5-b0e8-480e-a1f7-f4bfd811a672","attributes":{"percent":26.38,"name":"Elixir","id":"9f3f07a5-b0e8-480e-a1f7-f4bfd811a672"}},{"type":"language","id":"9f0e6241-71d6-484d-8b08-0c62a96a0c7d","attributes":{"percent":20.45,"name":"Clojure","id":"9f0e6241-71d6-484d-8b08-0c62a96a0c7d"}},{"type":"language","id":"5155f98a-9e54-4b67-812a-e28f18bf5e32","attributes":{"percent":14.97,"name":"Emacs Lisp","id":"5155f98a-9e54-4b67-812a-e28f18bf5e32"}},{"type":"language","id":"538039d7-217d-4779-ae74-fdcd5c4f932e","attributes":{"percent":2.84,"name":"Other","id":"538039d7-217d-4779-ae74-fdcd5c4f932e"}},{"type":"language","id":"6f75dd60-7b97-497a-b127-e41edb713e52","attributes":{"percent":2.07,"name":"Org-mode","id":"6f75dd60-7b97-497a-b127-e41edb713e52"}},{"type":"language","id":"70ceb009-2a08-47b8-9700-006dde9be488","attributes":{"percent":0.97,"name":"Makefile","id":"70ceb009-2a08-47b8-9700-006dde9be488"}}]}
+ var parse_data = function(api_data){
+     return api_data.data.map(
+         function(d){
+             return{name: d.attributes.name, percent: d.attributes.percent};
+         });
+ };
+ var fold_data = function(data){  return data.slice(0,4).concat([{name: "Other", percent: data.slice(4,data.length).map(function(d){return d.percent;}).reduce(function(previousValue, currentValue, currentIndex, array) {return previousValue + currentValue;})}]); }
+ var wakatimeShamefulRound = function toFixed(value){
+     value = value || 0;
+     return Math.floor(value*10)/10;
+ }
+ var color = d3.scale.linear()
+               .domain([0, 5])
+               .range(["#38B6AB", "#000"]);
+ var render = function(data){
+     var languagesContainer = d3.select("languages");
+     var languages = languagesContainer.selectAll("language")
+                                       .data(data);
+     languages.enter()
+              .append("language");
+     languages.style("width",function(lang){return wakatimeShamefulRound(lang.percent) + "%";})
+              .style("background-color", function(d, i) { return color(i); });
+     languages.exit().remove();
+
+     var names = languagesContainer.selectAll("text")
+                                   .data(data);
+     names.enter()
+          .append("text");
+     names.style("width",function(lang){return 100/data.length + "%";})
+          .text(function(lang){return lang.name + " " + wakatimeShamefulRound(lang.percent) + "%";});
+     names.exit().remove();
+ }
+ render(fold_data(parse_data(default_data)));
+ $.ajax({
+     url: '{{site.api.wakatime}}',
+     headers: {Accept: 'application/vnd.api+json'},
+     success: function(api_data) {
+         render(fold_data(parse_data(api_data)));
+     },
+     type: 'GET'
+ });
+</script>

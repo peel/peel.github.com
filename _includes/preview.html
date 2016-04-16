@@ -1,0 +1,14 @@
+<article class="post {% if post.featured == true %} featured {% endif %}">
+		<header>
+			  <div class="feature"><i class="fa fa-bookmark fa-lg"></i></div>
+			  <!-- <h2> -->
+				<!-- {% for category in post.categories %} -->
+				<!-- {{ category }}  -->
+				<!-- {% endfor %} -->
+			  <!-- </h2> -->
+			  <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+			  <span>
+				    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
+			  </span>
+		</header>
+</article>

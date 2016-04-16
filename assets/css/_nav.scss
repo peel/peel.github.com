@@ -7,7 +7,8 @@ nav {
 	z-index: 400;
 	top: 20px;
 	right: 20px;
-	font: 600 14px 'Open Sans', Serif;
+	font: 900 22px 'Roboto Slab', Serif;
+  text-transform: uppercase;
 	clear: both;
 
 	@include transition(all 0.2s ease-out);
@@ -61,7 +62,7 @@ nav {
 		}
 
 		a {
-			color: #007cc3;
+			color: #38B6AB;
 			padding: 6px 17px;
 		}
 	}

@@ -2,7 +2,7 @@
 layout: post
 title:  "JavaScript Design Patterns: Introduction"
 date:   2014-07-19 04:07:49
-categories: Programming Patterns
+categories: talks
 banner_image: "/media/desert.jpg"
 featured: true
 comments: true

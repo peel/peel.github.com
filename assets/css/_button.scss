@@ -5,7 +5,7 @@
 .smallbutton {
 	display: inline-block;
 	padding: 7px 22px;
-	font: 600 14px 'Open Sans', Serif;
+	font: 600 14px 'Roboto Slab', Serif;
 	border-radius: 4px;
 
 	@include transition(all 0.2s ease-in-out);
@@ -22,7 +22,7 @@
 		&:hover {
 			border: 2px solid #c3c2c9;
 			background: #fff;
-			color: #686868;
+			color: #000;
 		}
 	}
 

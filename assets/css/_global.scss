@@ -4,33 +4,35 @@
 
 body, html {
 	height: 100%;
-	background: #fff;
-	font: 400 16px "Open Sans", serif;
+  background: #f9f9f9;
+	font: 200 22px "Roboto Slab", serif;
+  line-height: 33px;
 	color: #3b3b3b;
 	padding: 0;
 	margin: 0;
 }
 
 a {
-	font-weight: 600;
-	color: #026ed2;
+	font-weight: 400;
+  color: #38B6AB;
+	/* color: #026ed2; */
 	text-decoration: none;
 	border-bottom: 3px solid transparent;
 
 	@include transition_two(border 0.2s ease-out, color 0.2s ease-out);
 
 	&:hover {
-		color: #0079ec;
+		color: #226D67;
 	}
 }
 
 h1 a:hover, p a:hover {
-	border-bottom: 3px solid #f1ece9;
+	/* border-bottom: 3px solid #f1ece9; */
 }
 
 h1, h2, h3, h4 {
 	margin: 30px 0;
-	font: 700 34px 'Domine', Serif;
+	font: 500 34px 'Roboto Slab', Serif;
 	line-height: 56px;
 	color: #262b30;
 
@@ -41,28 +43,29 @@ h1, h2, h3, h4 {
 
 h2 {
 	margin: 30px 0 20px;
-	font: 700 26px 'Domine', Serif;
+	font: 500 26px 'Roboto Slab', Serif;
 }
 
 h3 {
 	margin: 20px 0 10px;
-	font: 600 22px 'Open Sans', Serif;
+	font: 400 22px 'Open Sans', Serif;
 }
 
 h4 {
 	margin: 20px 0 10px;
-	font: 600 20px 'Open Sans', Serif;
+	font: 400 20px 'Roboto Slab', Serif;
 }
 
 p {
-	margin: 30px 0;
+	margin: 40px 0 30px 0;
 	line-height: 38px;
 	color: #333332;
 	word-wrap: break-word;
+  text-align: justify;
 }
 
 strong, em {
-	font-weight: 600;
+	font-weight: 400;
 }
 
 img {
@@ -91,12 +94,13 @@ blockquote, q, cite {
 	margin: 30px 0 30px 4%;
 	border-left: 3px solid #c6d5e1;
 	padding: 5px 4%;
-	font: italic 700 18px 'Domine', Serif;
+	font: italic 500 18px 'Roboto Slab', Serif;
 	line-height: 38px;
 
 	p {
 		margin: 0;
 		padding: 0;
+    text-align: justify;
 	}
 }
 
@@ -104,7 +108,7 @@ input:not([type=submit]):not([type=file]) {
 	padding: 8px 15px;
 	background: #fff;
 	border: 2px solid #808080;
-	font: 600 15px 'Open Sans', Serif;
+	font: 400 15px 'Open Sans', Serif;
 	border-radius: 4px;
 	outline: 0;
 
@@ -140,7 +144,7 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
 	@include transition(background 0.6s ease-out);
 
 	&:hover {
-		background: #3287c1;
+		background: #226D67;
 	}
 
 	span {
@@ -190,9 +194,9 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
 }
 
 footer {
-	padding: 25px 0;
+	padding: 50px 0 25px 0;
 	text-align: center;
-	font: 400 13px 'Open Sans', Serif;
+	font: 300 13px 'Roboto Slab', Serif;
 	line-height: 34px;
 	color: #a6a6a6;
 
@@ -201,7 +205,7 @@ footer {
 	}
 
 	a {
-		color: #5498dc;
+    color: #38B6AB;
 	}
 
 	.smallnav {
@@ -224,14 +228,14 @@ footer {
 
 .notification .ntitle {
 	color: #c4e2f8;
-	font: 700 18px 'Open Sans',Serif;
+	font: 500 18px 'Roboto Slab',Serif;
 	padding-right: 20px;
 	border-right: 2px solid #3285c4;
 }
 
 .notification .message {
 	color: #fff;
-	font: 700 18px 'Open Sans',Serif;
+	font: 500 18px 'Roboto Slab',Serif;
 	padding-left: 20px;
 }
 
@@ -257,7 +261,7 @@ footer {
 }
 
 .posts article header h2 a:hover {
-	color: #B3B3B3;
+	color: #226D67;
 }
 
 .cover header h2 a {

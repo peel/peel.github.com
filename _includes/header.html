@@ -1,6 +1,8 @@
+{% if page.url != "/" %}
 <header class="title">
 	<a href="{{ site.baseurl }}"><i class="fa {{ site.fa-logo }} fa-lg"></i><span>{{ site.title }}</span></a>
 </header>
+{% endif %}
 
 <nav class="wrapper {% if page.featured == true %} featured {% endif %} {% if site.theme_always_show_nav == true %} alwaysshow {% endif %}">
 	<a href="#" onclick="return false;"><i class="fa fa-navicon fa-lg"></i></a>
@@ -10,3 +12,5 @@
 		{% endfor %}
 	</ul>
 </nav>
+
+<link href='//fonts.googleapis.com/css?family=Roboto+Slab:700,300,400' rel='stylesheet' type='text/css'>

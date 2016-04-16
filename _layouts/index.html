@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section class="posts postindex wrapper" style="width:600px">
+    {% if site.logourl != "" %}<img src="{{ site.logourl | prepend: site.baseurl }}" class="profileimage" alt="user">{% endif %}
+    <h1 class="section">{{site.author_name}}<a href="http://wakatime.com/@{{site.owner.wakatime}}" class="languagesBox"><languages></languages></a></h1>
+    <p>{{content}}</p>
+    <h1 class="section">Talks</h1>
+    {% for post in site.categories.talks %}
+        {%include preview.html %}
+    {% endfor %}
+    <h1 class="section">Articles</h1>
+    {% for post in site.posts %}
+        {% unless post.categories contains "talks" %}
+            {%include preview.html %}
+        {% endunless %}
+    {% endfor %}
+</section>
+
+{% include wakatime.html %}
