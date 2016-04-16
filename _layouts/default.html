@@ -4,20 +4,26 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<title>{% if page.title %}{{site.title}} 🔥 {{ page.title }}{% else %}{{ site.title }} 🔥 {{site.author_name}}{% endif %}</title>
 		<meta name="description" content="{{ site.description }}" />
 
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/feed.xml">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "/assets/img/apple-touch-icon-114x114.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "/assets/img/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/assets/img/apple-touch-icon-144x144.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "/assets/img/apple-touch-icon-120x120.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/assets/img/apple-touch-icon-152x152.png" | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" href="{{ "/assets/img/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ "/assets/img/favicon-16x16.png" | prepend: site.baseurl }}" sizes="16x16" />
 		<link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 		<link rel="prefetch" href="{{ site.baseurl }}">
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
 		<link rel="stylesheet" href="{{ "/assets/css/screen.css" | prepend: site.baseurl }}">
-		<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Roboto+Slab:700,300,400|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>

@@ -1,0 +1,52 @@
+---
+title: "Play Slick with Oracle"
+date: 2014-10-26
+layout: post
+tags: oracle slick scala
+---
+<p>
+Working with Oracle database never is a pleasure. Right on from the environment setup till the very first CRUD operations. Yet often times we're forced to do so. As I haven't found one, here's a quick guide on how to integrate Oracle into Play/Slick app.
+</p>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Dependencies</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+Oracle is supported via a closed-source slick-extensions plugin from Typesafe that wraps JDBC driver. Pull it into your build by adding slick-extensions library and appropriate version of play-slick module to your build:
+</p>
+{% highlight scala %}
+libraryDependencies ++= "com.typesafe.slick" %% "slick-extensions" % "2.0.0" ::
+                        "com.typesafe.play" %% "play-slick" % "0.8.0" ::
+                        Nil
+{% endhighlight %}
+</div>
+</div>
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2">Configuration</h2>
+<div class="outline-text-2" id="text-orgheadline2">
+<p>
+In Play application.conf file set your database connection settings to (whereas default is db name):
+</p>
+{% highlight scala %}
+db.default.slickdriver=com.typesafe.slick.driver.oracle.OracleDriver  
+db.default.driver=oracle.jdbc.OracleDriver  
+db.default.url="jdbc:oracle:thin:@host:1521:sid"  
+db.default.user=username  
+db.default.password="password"  
+{% endhighlight %}
+</div>
+</div>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">Usage</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+<p>
+In your model classes <code>import com.typesafe.slick.driver.oracle.OracleDriver.simple._</code> and you’re good to go.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4">Known Issues</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+<p>
+A known issue with Oracle database is that whenever passing an empty value or nothing with an AutoInc index the db complains. To solve the issue you must provide the value which effectively means no AutoInc at all. Thus, I employed a simple solution of creating a spin-off data object without the id (and in most cases it is also my domain object as I usually don’t need ids) and then map it into the DB-compatible one. For the last task you might use a type class (I would not recommend using implicit conversion).</p>
+</div>
+</div>

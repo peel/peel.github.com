@@ -8,7 +8,11 @@
 			  <!-- </h2> -->
 			  <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
 			  <span>
-				    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
+            {%if post.categories contains 'talks' %}
+				    <time datetime="{{ post.date | date: "%Y" }}">{{ post.date | date: "%Y" }}</time>
+            {% else %}
+				    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            {% endif %}
 			  </span>
 		</header>
 </article>
