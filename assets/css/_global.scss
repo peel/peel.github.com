@@ -147,6 +147,14 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
 		background: #226D67;
 	}
 
+  img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: -8px;
+    padding: 0;
+  }
+
 	span {
 		display: inline-block;
 		margin-left: 15px;
