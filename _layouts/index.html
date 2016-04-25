@@ -4,7 +4,7 @@ layout: default
 
 <section class="posts postindex wrapper squeezed">
     {% if site.logourl != "" %}<img src="{{ site.logourl | prepend: site.baseurl }}" class="profileimage" alt="user">{% endif %}
-    <h1 class="section">{{site.author_name}}<a href="http://wakatime.com/@{{site.wakatime_url}}" class="languagesBox"><languages></languages></a></h1>
+    <h1 class="section">{{site.author_name}}<a href="{{site.wakatime_url}}" class="languagesBox"><languages></languages></a></h1>
     <p>{{content}}</p>
     <h1 class="section">Talks</h1>
     {% for post in site.categories.talks %}
@@ -18,4 +18,5 @@ layout: default
     {% endfor %}
 </section>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 {% include wakatime.html %}

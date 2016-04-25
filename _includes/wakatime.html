@@ -65,7 +65,7 @@
  }
  render(fold_data(parse_data(default_data)));
  $.ajax({
-     url: '{{site.api.wakatime}}',
+     url: '{{site.wakatime_api}}',
      headers: {Accept: 'application/vnd.api+json'},
      success: function(api_data) {
          render(fold_data(parse_data(api_data)));

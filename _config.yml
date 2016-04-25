@@ -2,7 +2,7 @@
 title: 						"Piotr Limanowski"
 email: 						"peel+www@codearsonist.com"
 description: 			"A señor code arsonist based in Gdansk, PL. Been doing scalable web products, with variety of languages (see above for the most recent), since early 2000s. Constatly working on simplyfing things. I write, talk and ship code. Aside from that I'm el modo evil brujito and a future hoverboard owner."
-baseurl: 				  "https://codearsonist.com"
+#baseurl: 				  "https://codearsonist.com"
 logourl: 					"/assets/img/bloglogo.png"
 icon:             "/assets/img/icon.png"
 
@@ -18,8 +18,11 @@ author_image: 			"https://avatars1.githubusercontent.com/u/505401"
 # Social Settings
 twitter_url: 				"http://twitter.com/peel"
 github_url:  				"http://github.com/peel"
-wakatime_url:        "http://wakatime.com/@peel"
+wakatime_url:       "http://wakatime.com/@peel"
 linkedin_url:  			"https://www.linkedin.com/in/piotr-limanowski-492ba031"
+
+#API:
+wakatime_api:       "https://secure-atoll-9796.herokuapp.com/languages"
 
 
 # Theme Settings
