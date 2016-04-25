@@ -2,6 +2,10 @@
 	INDEX STYLES
 */
 
+.squeezed{
+    max-width: 600px;
+}
+
 .index {
 	display: none;
 	width: 100%;
@@ -35,6 +39,7 @@
 	.show {
 		display: block;
 	}
+
 
 	@media screen and (max-width: 790px) {
 		h1 {
