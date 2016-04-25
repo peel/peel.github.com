@@ -5,6 +5,17 @@
 .squeezed{
     max-width: 600px;
 }
+@media screen and (max-width: 790px) {
+  .indexicon{
+    float: right !important;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .indexicon{
+    float: right !important;
+  }
+}
 
 .index {
 	display: none;
