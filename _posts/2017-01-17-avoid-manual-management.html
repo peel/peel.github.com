@@ -1,0 +1,51 @@
+---
+title: "Avoiding manual microservices management in development"
+date: 2017-01-17 13:27:00
+layout: post
+tags: docker scala
+---
+<div id="outline-container-orge08ceb4" class="outline-2">
+<h2 id="orge08ceb4">The Issue</h2>
+<div class="outline-text-2" id="text-orge08ceb4">
+<p>
+So you've done hunderds of #microservices, you're running them in #docker and development, 
+testing (don't even get me started on deployment) have just got infinitely more sophisticated.
+You're keeping all those shiny docker containers in <code>docker-compose</code> so you can run them locally,
+building with your favourite build tool that spits the containers all over the place. 
+And you either are in a dev mode or production mode. Either all in docker or all in local. 
+Or you do all that manually. Or start a service in docker to get the dependencies started and then kill the top-level one.
+However here's a quick fix to the cumbersome process&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-orga4b1a2e" class="outline-2">
+<h2 id="orga4b1a2e">The Solution</h2>
+<div class="outline-text-2" id="text-orga4b1a2e">
+<p>
+All you need to do is fetch dependencies for given service and start them and run the service(s) under development with incremental build tool with local-dev config.
+I'm using <code>Makefile</code> for most of the cumbersome automation around projects and interacting with bash environment rather than pushing all too much project unrelated stuff into sbt/lein/mix.
+Here's a sample task that does what's described above:
+</p>
+{% highlight nil %}
+.PHONY: run $(R)
+run: $(R)
+$(R):
+    @docker-compose kill $(@) || true
+    @docker-compose up -d $(filter-out $(R),$(shell dcdeps $(@)))
+    @sbt "project $(@)" "~re-start --- -Dconfig.resource=dev.conf"
+{% endhighlight %}
+<p>
+The task simply issues docker-compose and sbt commands for any given project, therfore you can run it as follows:
+</p>
+{% highlight nil %}
+make -j2 run R="first-service second-service"
+{% endhighlight %}
+<p>
+Which will execute the command for both first-service and second-service in two separate threads allowing the whole thing to work independently.
+That's why the whole <code>.PHONY</code> magic is being used rather than simple variables.
+I'm also using a simple utility I have put together in a couple of minutes - <a href="http://github.com/peel/dcdeps">dcdeps</a> (as in: docker-compose dependencies).
+The utility simply looks into given compose.yml and prints dependencies for given service, hance docker-compose uses that for running all the listed services in the background
+with filtering out the services that are about to be ran.
+The thing is though, that the approach enables you to simply change the tags of containers and run mocks (<a href="http://stoplight.io/platform/prism/">prism</a>, <a href="https://jsonplaceholder.typicode.com/">json-placeholder</a>, <a href="http://wiremock.org/">wiremock</a> anyone?) instead of the real thing.</p>
+</div>
+</div>
