@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/peel
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://codearsonist.com
+  * I am peel (https://keybase.io/peel) on keybase.
+  * I have a public key ASCn60IC2NPQNIw6_-82br-Z27fYMMfaJ0kzx61aFFmcbAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120a7eb4202d8d3d0348c3affef366ebf99dbb7d830c7da274933c7ad5a14599c6c0a",
+            "host": "keybase.io",
+            "kid": "0120a7eb4202d8d3d0348c3affef366ebf99dbb7d830c7da274933c7ad5a14599c6c0a",
+            "uid": "099ae4672fc8922e18dc0a75b1ff1519",
+            "username": "peel"
+        },
+        "service": {
+            "hostname": "codearsonist.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1486810974,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1486810928,
+        "hash": "d87fa869f767b00824c068357537c7c0727e376b313a03a2af48e3788ba768296b38090fd6d3e0457f29792d8555f0c978cf7a2bb946502a181be448917f3672",
+        "seqno": 876196
+    },
+    "prev": "39b9ce6c6586f4d22fe9555504a8eb754110f072ecd57c799484926db09bd9fb",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgp+tCAtjT0DSMOv/vNm6/mdu32DDH2idJM8etWhRZnGwKp3BheWxvYWTFAvR7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYTdlYjQyMDJkOGQzZDAzNDhjM2FmZmVmMzY2ZWJmOTlkYmI3ZDgzMGM3ZGEyNzQ5MzNjN2FkNWExNDU5OWM2YzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYTdlYjQyMDJkOGQzZDAzNDhjM2FmZmVmMzY2ZWJmOTlkYmI3ZDgzMGM3ZGEyNzQ5MzNjN2FkNWExNDU5OWM2YzBhIiwidWlkIjoiMDk5YWU0NjcyZmM4OTIyZTE4ZGMwYTc1YjFmZjE1MTkiLCJ1c2VybmFtZSI6InBlZWwifSwic2VydmljZSI6eyJob3N0bmFtZSI6ImNvZGVhcnNvbmlzdC5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ4NjgxMDk3NCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDg2ODEwOTI4LCJoYXNoIjoiZDg3ZmE4NjlmNzY3YjAwODI0YzA2ODM1NzUzN2M3YzA3MjdlMzc2YjMxM2EwM2EyYWY0OGUzNzg4YmE3NjgyOTZiMzgwOTBmZDZkM2UwNDU3ZjI5NzkyZDg1NTVmMGM5NzhjZjdhMmJiOTQ2NTAyYTE4MWJlNDQ4OTE3ZjM2NzIiLCJzZXFubyI6ODc2MTk2fSwicHJldiI6IjM5YjljZTZjNjU4NmY0ZDIyZmU5NTU1NTA0YThlYjc1NDExMGYwNzJlY2Q1N2M3OTk0ODQ5MjZkYjA5YmQ5ZmIiLCJzZXFubyI6OSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDEvnC14toDacprfdMKWq3B6F3G2vL0Y7uSAwq2TL8n5x/9RAEFXQ0FBXjdKgm+Bl1kjVBbv2smTBjH7rlCwkoEqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgrqx5+NhRSi5c8J9PHDBi38etwpDSftXo05PC6oeGr1mjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/peel
+
+==================================================================
