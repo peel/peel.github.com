@@ -232,6 +232,21 @@
 			list-style: square;
 		}
 
+    .todo {
+      display: none;
+    }
+    .outline-3 {
+        h3::before {
+          content: "λ";
+          color: #ececf1;
+          float: left;
+          margin-left: -20px;
+        }
+        p {
+          margin-top: 0;
+        }
+    }
+
 		.container {
 			position: relative;
 
