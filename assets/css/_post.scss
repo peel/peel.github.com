@@ -246,7 +246,12 @@
           margin-top: 0;
         }
     }
-
+    .footdef {
+        a.footnum {
+            float: left;
+            margin-right: 1em;
+        }
+    }
 		.container {
 			position: relative;
 

@@ -1,0 +1,279 @@
+---
+title: "Reading for Programmers"
+date: 2017-06-12 11:23:00
+layout: post
+featured: true
+banner_image: img/rfp-cover.jpg
+tags: papers
+---
+<p>
+<b>TD;DR:</b> Use a three-pass (verify-grasp-analyse) reading algorithm and get comfortable with reading <a href="https://twitter.com/peel/status/840604048629874688">hundreds</a> of papers. Use org-mode (w/ helm-bibtex, org-ref and interleave) and keep the notes in check.
+</p>
+<div id="outline-container-org9d2b894" class="outline-2">
+<h2 id="org9d2b894">Introduction</h2>
+<div class="outline-text-2" id="text-org9d2b894">
+<p>
+With computing resources getting cheaper by a minute, the rise of functional and distributed programming, software business and academia are getting closer than ever. 
+Modern software is able to and does rely heavily on advancements of the academics. Cutting edge research getting into everyday's code is not an uncommon act.
+We can either choose to ignore the backing concepts of the code we deliver or embrace the change and work our way into it. 
+Either grab libraries, use the open source contributed solutions and ignore the inner workings or try to understand the ideas.
+Look under the kitchen sink whenever something falls down into the black hole.
+Following the scientific advancements requires a significant willpower and either way it merely leads toward 10 Stages of Reading a Scientific Paper<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+You can however easily get beyond that by teaching yourself a method to skip the painful parts&#x2026;
+</p>
+
+
+<div class="figure">
+<p><img src="img/rfp-abstract.png" alt="rfp-abstract.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1f29440" class="outline-2">
+<h2 id="org1f29440">Three-pass reading</h2>
+<div class="outline-text-2" id="text-org1f29440">
+<p>
+  It's been said many times<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup><sup>, </sup><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> that reading a paper (honestly reading anything that requires understanding sufficently advanced concepts) should be tackled in a multi-pass manner.
+  The main concept here is that each time you pass the paper you do that with very specific aim in mind. 
+At <i>first</i> you verify the paper and its contents, <i>secondly</i> you grasp the general ideas and <i>thirdly</i> you get to know the concepts throughly and get your notes flowing.
+</p>
+</div>
+<div id="outline-container-orgf392faf" class="outline-3">
+<h3 id="orgf392faf"><span class="todo READY">READY</span> First pass - Verify</h3>
+<div class="outline-text-3" id="text-orgf392faf">
+<p>
+The first pass provides you with a high-level view of the contents. Helps you avoid getting stuck in a badly written, uninteresting, wrong or simply beyond your current knowledge text.
+To get the most from the first pass I usually start with references. And although statistically 80% of the authors never read the cited texts in full <sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, they provide a great overview of what to expect.
+Whenever approaching a complex, long paper I tend to mark the cited papers I've read. So I can get back to my infamous notes) or verify the background.
+Reading the papers starts with the title, abstract and introduction which I read carefully the first time I approach a paper.
+They are the first sign of whether the article is the one to go with. After that I scan through the article focusing on section headings, graphical elements and math formulas.
+I also read the results and discussion section to have an overview of where I will be lead with the article. 
+The author of "How to read papers"<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup> paper, that was recently trending over at HackerNews suggests that the first pass shall give you an answer to 5Cs:
+</p>
+<blockquote>
+<ul class="org-ul">
+<li><i>Category</i> - what type of paper is this?</li>
+<li><i>Context</i> - which other papers it is related to? which theoretical bases were used to analyze the problem?</li>
+<li><i>Correctness</i> - do the assumptions appear to be valid?</li>
+<li><i>Contributions</i> - what are the paper's main contributions?</li>
+<li><i>Clarity</i> - is it well written?</li>
+</ul>
+</blockquote>
+<p>
+For me after the first reading, aside from the bird's eye view of the paper, allows to decide whether I should give it a second pass.
+Personally I ask myself:
+</p>
+<ul class="org-ul">
+<li>What's in it for me?</li>
+<li>Do I have enough background?</li>
+</ul>
+
+<p>
+Reading papers can greatly improve your knowledge, provide you with practical solutions, methodologies of doing things or even experimental design concepts.
+Yet papers do require prior knowledge - a background. Whenever after the first pass I see a gaping hole of missing background I mark article as <code>TODO</code>, tag with <code>:advanced:</code> and leave it until I am able to read it or go through references and the Internet and build up the background.
+</p>
+</div>
+</div>
+<div id="outline-container-org1ead47f" class="outline-3">
+<h3 id="org1ead47f"><span class="todo READY">READY</span> Second pass - Grasp concepts</h3>
+<div class="outline-text-3" id="text-org1ead47f">
+<p>
+I start the second pass with the goal of grasping the concepts and supporting evidence so I can describe it to a fellow programmer over a beer.
+I usually sync it to my Onyx Boox large screen epaper reader to avoid printing. 
+This allows me to conveniently follow thought process, paying attention to concepts without going deep into its execution.
+While reading I mark, highlight or scribble notes on the side of the paper. A quick rescan will later show me the paper's major points.
+I try to work my way through diagrams and graphical representations.
+Whenever hitting stuff I do not comprehend, it's usually pretty easy to see whether it will prevent me from following the concepts this rendering further reading useless or it's a thing I can jot down and learn later on.
+The blockers have to be handled immedietely before going any further. So&#x2026; google that, search my notes, learn.
+Next thing I also focus on on the second pass is inline references. Some of the references are instant hook, so I add them to <code>TODO</code> papers list.
+With the second pass I have a scribbled, marked and highlighted article, understand the concepts and can share the idea. 
+The thing is however that for the essential concepts it's still not enough. Thus the third pass.
+</p>
+</div>
+</div>
+<div id="outline-container-org67609ef" class="outline-3">
+<h3 id="org67609ef"><span class="todo READY">READY</span> Third pass - Critique</h3>
+<div class="outline-text-3" id="text-org67609ef">
+<p>
+The third pass is obviously for the highly interesting papers I need to comprehend. 
+I work my way through the parts I missed previously and try to see the results/discussion in a larger spectrum. 
+Ie. How does profunctor optics relate to extensive domains we've built? 
+The third pass is also where I tend to differ from some of the academics. It is said, that in order to review a paper you need to recreate it without copying.
+I usually do that only with the papers that are vital to my work. I pick the tools I use and try to rebuild that.
+Indeed it can make one angry. It will get on your nerves and you will hate the ideas. But in the end the grand idea is usually worth it.
+The third pass usually ends up with a bit of code and notes. Or just the notes. But the notes are where it all belongs.
+Third pass is for the active reader. Even if the article is not core to the things I do and I decide not to fiddle around in REPL I am an active reader.
+I mark even more things, note stuff (that usually won't fit in margins) on the side. I don't copy stuff. Use my own words so I process it. I use structured notes - outline.
+I critically look for inconsistencies. Is the reasoning right? Is the samples number sufficient?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1cdb584" class="outline-2">
+<h2 id="org1cdb584">The Notes</h2>
+<div class="outline-text-2" id="text-org1cdb584">
+<p>
+I have been tinkering with the notes workflow for a couple of years. With lots of notes and papers read it gets tedious to grep files for related notes. 
+And it is somewhere on the verge of madness to have it all stored in a paper notebook.
+As an avid Emacs uses I have been taking notes with the almighty <a href="http://orgmode.org">org-mode</a>. An extensible Emacs major mode for all things text/data related. 
+With org-mode's minimal syntax and tree layout it is incredibly easy to structure and extend the simple, single-file knowledge base.
+</p>
+</div>
+<div id="outline-container-orgdf8fe51" class="outline-3">
+<h3 id="orgdf8fe51">The workflow</h3>
+<div class="outline-text-3" id="text-orgdf8fe51">
+<p>
+I have been keeping a huge notes <code>papers.org</code> and a references <code>papers.bib</code> files for a couple of years now.
+The files contain an abysmal list of books, papers and articles I've been tagging as <code>TODO</code>. 
+Usually to avoid fiddling around I just add a quick <code>TODO</code> of a document with an <code>org-capture</code><sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup> template (be it paper, article, link, whatever).
+Every now and then (usually whenever picking the next paper to read) I go through the file and turn the captures into proper Bibtex references.
+</p>
+<div class="org-center">
+
+<div id="orga480650" class="figure">
+<p><img src="img/rfp-bibtex.png" alt="rfp-bibtex.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Bibtex has been a de-facto standard reference management system for years now</p>
+</div>
+</div>
+<p>
+Bibtex has been a de-facto standard reference management system for years now. Hence it is perfectly possible to grab all the necessary document details from the Internet.
+Either by searching by name, title, tag or&#x2026; a pdf file. I usually either drag and drop a downloaded pdf onto Emacs window with references files so it fetches the data on it's own.
+Or&#x2026; just use the beautiful <a href="https://github.com/tmalsburg/helm-bibtex">helm-bibtex</a> which allows me to quickly access all the major scientific search engines from arxiv to google scholar.
+</p>
+<div class="org-center">
+
+<div id="org2c14a7b" class="figure">
+<p><img src="img/rfp-helm-bibtex.png" alt="rfp-helm-bibtex.png" />
+</p>
+<p><span class="figure-number">Figure 3: </span>helm-bibtex allows quick access to references</p>
+</div>
+</div>
+<p>
+I also turn the capture <code>TODO</code> into a document <code>TODO</code> task in the <code>papers.org</code> itself. 
+However to keep thing optimised, it gets done using the reference - enter <a href="https://github.com/jkitchin/org-ref">org-ref</a>. A quick shortcut and the reference and <code>TODO</code> are now linked.
+My usual workflow for taking notes starts with the third pass which I usually do in Emacs' <a href="https://github.com/politza/pdf-tools">pdf-tools</a> anyway.
+Running a REPL or a worksheet side-by-side with a paper is invaluable. Same goes for taking notes.
+And guess what, everything I have done so far enables me to use a single command to link notes to <b>specific</b> places in a pdf. 
+Enabling interleave mode (<code>M-x interleave</code>, duh) on given subtree (with <code>:INTERLEAVE_PDF:</code> property set) allows that by simply attaching pdf location. And voila:
+</p>
+<div class="org-center">
+
+<div id="orga25df21" class="figure">
+<p><img src="img/rfp-interleave.png" alt="rfp-interleave.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>iterleave allows linking notes to pdf parts</p>
+</div>
+</div>
+<p>
+With that at hand I'm able to effectively keep the notes neatly connected to source material. And between each other using org-mode subtree search and tags.
+</p>
+</div>
+</div>
+<div id="outline-container-org693c73e" class="outline-3">
+<h3 id="org693c73e">The setup</h3>
+<div class="outline-text-3" id="text-org693c73e">
+<p>
+The setup is indeed prety straight-forward to achieve. A couple of packages and a minimal configuration options.
+I store my dotfiles in a github repository. My (now migrated from plain ol' init.el) spacemacs config's there as well. Feel free to <a href="https://dotfiles.codearsonist.com">roam around and steal stuff - dotfiles.codearsonist.com</a>.
+</p>
+</div>
+<div id="outline-container-org498efa4" class="outline-4">
+<h4 id="org498efa4">pdf-tools</h4>
+<div class="outline-text-4" id="text-org498efa4">
+<p>
+A prereq for Emacs to be able to display pdfs properly. I'm using stock configuration without extra options.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd4429d6" class="outline-4">
+<h4 id="orgd4429d6">org-ref</h4>
+<div class="outline-text-4" id="text-orgd4429d6">
+<p>
+org-ref also requires just a minimal setup to get the wheels turning and the configuration corresponds the helm-bibtex one:
+</p>
+{% highlight cl %}
+(setq org-ref-notes-directory "$SOME"
+      org-ref-bibliography-notes "$SOME/index.org"
+      org-ref-default-bibliography '("$SOME/index.bib")
+      org-ref-pdf-directory "$SOME/lib/")
+{% endhighlight %}
+</div>
+</div>
+<div id="outline-container-org3f3259e" class="outline-4">
+<h4 id="org3f3259e">helm-bibtex</h4>
+<div class="outline-text-4" id="text-org3f3259e">
+<p>
+I guess org-ref config should be propagated down to the helm-bibtex one. But here's how you'd configure helm-bibtex directly:
+</p>
+{% highlight cl %}
+(setq helm-bibtex-bibliography "$SOME/index.bib" ;; where your references are stored
+      helm-bibtex-library-path "$SOME/lib/" ;; where your pdfs etc are stored
+      helm-bibtex-notes-path "$SOME/index.org" ;; where your notes are stored
+      bibtex-completion-bibliography "$SOME/index.bib" ;; writing completion
+      bibtex-completion-notes-path "$SOME/index.org"
+)
+{% endhighlight %}
+</div>
+</div>
+<div id="outline-container-orga6f7a10" class="outline-4">
+<h4 id="orga6f7a10">interleave</h4>
+<div class="outline-text-4" id="text-orga6f7a10">
+<p>
+None. Set the <code>:INTERLEAVE_PDF:</code> property on subtree in papers.org and you're done 🎉️
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd6f3d83" class="outline-2">
+<h2 id="orgd6f3d83">Picking the next paper</h2>
+<div class="outline-text-2" id="text-orgd6f3d83">
+<p>
+As a side note. The Internet is full of papers. Hackernews, Twitter stream, Reddit produce must read items quicker than we will ever be able to follow.
+From my personal experience though the best source of papers are simply references from other papers. Each specialty has its own paper 'canon'. 
+Start with them and gradually work your way towards others either by following citations (CiteSeer, Google Scholar) or references directly.
+Keep in mind that citations number is a pretty good sanity check whenever a paper is getting recommended.
+</p>
+</div>
+</div>
+<div id="outline-container-org431c0dd" class="outline-2">
+<h2 id="org431c0dd">Summary</h2>
+<div class="outline-text-2" id="text-org431c0dd">
+<p>
+Armed with a method of reading scientific material I have read numerous deeply technical papers. Often beyond my usual knowledge level.
+The approach allows me for improving my reading skills (also see: <sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>) with each paper I read. The more I read the better my understanding is.
+I am able to share the knowledge by discussing it with other people. All the above is the basic workflow idea I have been working with and find it perfect for my needs.
+There is more to it including automated tag dependency graphing I have implemented. But that is a separate (long) story&#x2026;
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Ruben, A. (2016). How to read a scientific paper. <a href="http://www.sciencemag.org/careers/2016/01/how-read-scientific-paper">Accessed at 07/06/17</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Pain, E. (2016). How to (seriously) read a scientific paper. <a href="http://www.sciencemag.org/careers/2016/03/how-seriously-read-scientific-paper">Accessed at 07/06/17</a> 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+Keshav, S. (2013). How to Read a Paper. <a href="http://www.albany.edu/spatial/WebsiteFiles/ResearchAdvices/how-to-read-a-paper.pdf">Accessed at 07/06/17</a> 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+Simkin, M.V. and Roychowdhury V.P. (2002). Read before you cite! <a href="https://arxiv.org/pdf/cond-mat/0212043.pdf">Accessed at 07/06/17</a> 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara">A quick-access scrapnote-taking utility</div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><p class="footpara">
+Bayard, P. (2009). How to Talk About Books You Haven't Read. Bloomsbury USA </p></div></div>
+
+
+</div>
+</div>
