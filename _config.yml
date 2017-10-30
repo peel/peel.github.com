@@ -16,10 +16,11 @@ author_image: 			"https://avatars1.githubusercontent.com/u/505401"
 
 
 # Social Settings
-twitter_url: 				"http://twitter.com/peel"
-github_url:  				"http://github.com/peel"
-wakatime_url:       "http://wakatime.com/@peel"
+twitter_url: 				"https://twitter.com/peel"
+github_url:  				"https://github.com/peel"
+wakatime_url:       "https://wakatime.com/@peel"
 linkedin_url:  			"https://www.linkedin.com/in/piotr-limanowski-492ba031"
+podcast_url: 				"https://chwast.codearsonist.com"
 
 #API:
 wakatime_api:       "https://secure-atoll-9796.herokuapp.com/languages"
