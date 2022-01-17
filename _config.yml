@@ -1,17 +1,16 @@
 # Site Settings
 title: 						"Piotr Limanowski"
-email: 						"peel+www@codearsonist.com"
+email: 			"plimanowski(at)pm.me"
 description: 			"A señor code arsonist based in Gdansk, PL. Been doing scalable web products, with variety of languages (see above for the most recent), since early 2000s. Constatly working on simplyfing things. I write, talk and ship code. Aside from that I'm el modo evil brujito and a future hoverboard owner."
-#baseurl: 				  "https://codearsonist.com"
 logourl: 					"/assets/img/bloglogo.png"
 icon:             "/assets/img/icon.png"
 
 
 # Author Settings
 author_name: 				"Piotr Limanowski"
-author_url: 				"https://codearsonist.com"
-author_bio: 				"A señor code arsonist based in Gdansk, PL. Been doing scalable web products, with variety of languages (see above for the most recent), since early 2000s. Constatly working on simplyfing things. I write, talk and ship code. Aside from that I'm el modo evil brujito and a future hoverboard owner."
-author_email: 			"peel+www@codearsonist.com"
+author_url: 				"https://peel.github.io"
+author_bio: 				"A señor software dev based in Gdansk, PL. Been doing scalable web products, with variety of languages (see above for the most recent), since early 2000s. Constatly working on simplyfing things. I write, talk and ship code. Aside from that I'm el modo holy brujito and a future hoverboard owner."
+author_email: 			"plimanowski(at)pm.me"
 author_image: 			"https://avatars1.githubusercontent.com/u/505401"
 
 
@@ -20,7 +19,7 @@ twitter_url: 				"https://twitter.com/peel"
 github_url:  				"https://github.com/peel"
 wakatime_url:       "https://wakatime.com/@peel"
 linkedin_url:  			"https://www.linkedin.com/in/piotr-limanowski-492ba031"
-podcast_url: 				"https://chwast.codearsonist.com"
+podcast_url: 				"https://chawst.it"
 
 #API:
 wakatime_api:       "https://secure-atoll-9796.herokuapp.com/languages"
